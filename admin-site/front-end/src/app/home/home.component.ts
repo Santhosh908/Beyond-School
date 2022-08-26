@@ -12,10 +12,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
   filepath:any=[]
   array:any=[]
-  safeURL
-  constructor(private http:HttpClient,private sanitizer: DomSanitizer) { 
-    let videoURL = "https://www.youtube.com/watch?v=1KT2asqA1J8";
-   this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(videoURL);
+  constructor(private http:HttpClient) { 
+   
   }
   // sanitizeVideoUrl() {
   //   return this.sanitizer.bypassSecurityTrustHtml(this.news.embeddedVideoHtml)

@@ -18,6 +18,7 @@ import { JournalismComponent } from './components/journalism/journalism.componen
 import { PhotographyComponent } from './components/photography/photography.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { MusicComponent } from './components/music/music.component';
+import { DanceComponent } from './components/dance/dance.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MusicComponent } from './components/music/music.component';
     PhotographyComponent,
     SportsComponent,
     MusicComponent,
+    DanceComponent,
   ],
   imports: [
     BrowserModule,
