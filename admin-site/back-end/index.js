@@ -19,7 +19,24 @@ app.get("/uploadedfiles",function(req,res){
   })
 })
 app.get("/getvideos",function(req,res){
-  var querry=`SELECT * FROM psgskill.uploaddata`
+  var querry=`SELECT * FROM psgskill.uploaddata WHERE flag="0"`
+  database.query(querry,function(err,data){
+    res.send(data)
+  })
+})
+app.post("/changeboolean",function(req,res){
+  var id=req.body.id
+  var querry=`UPDATE psgskill.uploaddata
+  SET flag="1"
+  WHERE id=${id};`
+  console.log(id);
+  database.query(querry,function(err,data){
+    if(err)
+    throw err
+  })
+})
+app.get("/verified",function(req,res){
+  var querry=`SELECT * FROM psgskill.uploaddata WHERE flag="1"`
   database.query(querry,function(err,data){
     res.send(data)
   })

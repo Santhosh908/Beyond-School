@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class RightnavComponent implements OnInit {
 
   constructor(private router:Router) { }
+  nav(){
+    this.router.navigate(['uploadedvideos'])
+  }
   publish(){
       this.router.navigate(['publishpage'])
   }

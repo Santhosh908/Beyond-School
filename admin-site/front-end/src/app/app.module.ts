@@ -24,6 +24,7 @@ import { RightnavComponent } from './nav/rightnav/rightnav.component';
 import { PublishpageComponent } from './publishpage/publishpage.component';
 import { FormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { UploadedvideosComponent } from './uploadedvideos/uploadedvideos.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MatIconModule} from '@angular/material/icon';
     DanceComponent,
     RightnavComponent,
     PublishpageComponent,
+    UploadedvideosComponent,
   ],
   imports: [
     BrowserModule,

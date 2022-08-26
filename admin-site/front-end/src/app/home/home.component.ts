@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
    
   }
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/getvideos").subscribe((data)=>{
+    this.http.get("http://localhost:3000/verified").subscribe((data)=>{
       this.url=data
       console.log(data)
        for(let i=0;i<this.url.length;i++){
