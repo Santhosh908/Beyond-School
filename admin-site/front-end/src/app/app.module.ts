@@ -19,6 +19,9 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { SportsComponent } from './components/sports/sports.component';
 import { MusicComponent } from './components/music/music.component';
 import { DanceComponent } from './components/dance/dance.component';
+import { YouTubePlayerModule } from "@angular/youtube-player";
+import { RightnavComponent } from './nav/rightnav/rightnav.component';
+import { PublishpageComponent } from './publishpage/publishpage.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { DanceComponent } from './components/dance/dance.component';
     SportsComponent,
     MusicComponent,
     DanceComponent,
+    RightnavComponent,
+    PublishpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ import { DanceComponent } from './components/dance/dance.component';
     BrowserAnimationsModule,
     RouterModule,
     HttpClientModule,
-    MatSidenavModule
+    MatSidenavModule,
+    YouTubePlayerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

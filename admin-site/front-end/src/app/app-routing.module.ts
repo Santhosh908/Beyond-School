@@ -12,6 +12,7 @@ import { PhotographyComponent } from './components/photography/photography.compo
 import { SportsComponent } from './components/sports/sports.component';
 import { MusicComponent } from './components/music/music.component';
 import { DanceComponent } from './components/dance/dance.component';
+import { PublishpageComponent } from './publishpage/publishpage.component';
 
 const routes: Routes = [{path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'home',component:HomeComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [{path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'photography',component:PhotographyComponent},
   {path:'sports',component:SportsComponent},
   {path:'music',component:MusicComponent},
-  {path:'music',component:DanceComponent}];
+  {path:'music',component:DanceComponent},
+  {path:'publishpage',component:PublishpageComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {DomSanitizer} from '@angular/platform-browser';
 
-
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class WrittingComponent implements OnInit {
   safeURL
   constructor(private http:HttpClient,private sanitizer: DomSanitizer) { 
-    let videoURL = "https://www.youtube.com/watch?v=1KT2asqA1J8";
+    let videoURL = "https://www.youtube.com/shorts/-oz5y5bqx_0";
    this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(videoURL);
   }
 
