@@ -22,6 +22,7 @@ import { DanceComponent } from './components/dance/dance.component';
 import { YouTubePlayerModule } from "@angular/youtube-player";
 import { RightnavComponent } from './nav/rightnav/rightnav.component';
 import { PublishpageComponent } from './publishpage/publishpage.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { PublishpageComponent } from './publishpage/publishpage.component';
     HttpClientModule,
     MatSidenavModule,
     YouTubePlayerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
