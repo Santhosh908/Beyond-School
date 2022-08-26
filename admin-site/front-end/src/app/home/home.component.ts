@@ -8,22 +8,20 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  filepath:any=[]
-  array:any=[]
+  url:any=[]
+  a:any=[]
   constructor(private http:HttpClient) { 
    
   }
-  // sanitizeVideoUrl() {
-  //   return this.sanitizer.bypassSecurityTrustHtml(this.news.embeddedVideoHtml)
-  // }
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/uploadedfiles").subscribe((data)=>{
-      this.array=data
-      for(let i=0;i<this.array.length;i++){
-      this.filepath.push(this.array[i].filepath)
-      }
-      console.log(this.filepath)
-    })
+    this.http.get("http://localhost:3000/getvideos").subscribe((data)=>{
+      this.url=data
+      console.log(data)
+       for(let i=0;i<this.url.length;i++){
+        this.a.push([this.url[i].filepath,this.url[i].id]);
+        console.log(this.a)
+       }
+    }) 
   }
 
 }

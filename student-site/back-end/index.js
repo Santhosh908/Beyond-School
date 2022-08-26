@@ -21,8 +21,7 @@ app.get("/getskills",function(req,res){
 
 app.post("/thumbnail-upload",function(req,res){
   var file=req.files.thumbnail
-  var uploadpath='C:/Users/Santhosh/OneDrive/Desktop/PSG-itech/project/student-site/back-end/upload/'+file.name
-  console.log(uploadpath)
+  var uploadpath='C:/Users/Santhosh/OneDrive/Desktop/PSG-itech/project/admin-site/front-end/src/assets/video/'+file.name
   file.mv(uploadpath,function(err){
     if(err) {return res.status(500).send(err)};
   })
@@ -31,7 +30,7 @@ app.post("/uploadvalues",function(req,res){
   var id=req.body.id;
   var skillname=req.body.skillname;
   var filename=req.body.fn;
-  var filepath='C:/Users/Santhosh/OneDrive/Desktop/PSG-itech/project/student-site/back-end/upload/'+filename
+  var filepath='assets/video/'+filename
   var querry=`INSERT INTO psgskill.uploaddata VALUES("${id}","${skillname}","${filename}","${filepath}",0)`;
   database.query(querry,function(err){
     if(err){

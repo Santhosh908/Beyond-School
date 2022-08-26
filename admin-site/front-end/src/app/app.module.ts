@@ -23,6 +23,7 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
 import { RightnavComponent } from './nav/rightnav/rightnav.component';
 import { PublishpageComponent } from './publishpage/publishpage.component';
 import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MatSidenavModule,
     YouTubePlayerModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

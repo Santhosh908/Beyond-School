@@ -1,42 +1,9 @@
-<!-- <p>home works!</p>
-<div  *ngFor="let i of filepath" >
-    <video width="640px" height="267px"  controls preload="none"> -->
-        <!-- <source src="https://pixabay.com/videos/countdown-10-seconds-movie-2637/" type='video/mp4'> -->
-        <!-- <source src="/student-site/back-end/upload/Countdown - 2637.mp4" type="video/mp4">
-        <source src="/student-site/back-end/upload/Countdown - 2637.ogg" type="video/ogg">
-</video> -->
-<!-- <video src="{{i}}" type="video/mp4" this.image = this.sanitization.bypassSecurityTrustStyle(`url(${element.image})`);
-    ></video> -->
-<!-- </div> -->
-<!-- <table>
-    <tr *ngFor="let i of filepath">
-        <td>
-
-        </td>
-    </tr>
-</table> -->
-<!-- <video
-      autoplay
-      controls
-      id="example_video_1"
-      width="800"
-      height="800"
-      src="./Countdown - 2637.mp4"
-      type="video/mp4"
-    >
-</video> -->
-
-<!-- <video
-      autoplay
-      controls
-      id="example_video_1"
-      width="800"
-      height="800"
-      src="/student-site/back-end/upload/Countdown - 2637.mp4"
-      type="video/mp4"
-    >
-      This is a video1
-    </video> -->  
-    <!-- <iframe  class="video" width="425" height="344" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen></iframe> -->
     <app-sidenav></app-sidenav>
+
     <app-rightnav></app-rightnav>
+    <tr *ngFor="let url1 of a"  class="videorow">
+        <h5 class="text"> Video uploaded by {{url1[1]}}</h5>
+        <video controls  allow="autoplay"  width="500px" class="video">
+        <source src="{{url1[0]}}" type="video/mp4" >
+        </video>
+    </tr>

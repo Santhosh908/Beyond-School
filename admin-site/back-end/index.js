@@ -18,7 +18,12 @@ app.get("/uploadedfiles",function(req,res){
     res.send(data)
   })
 })
-
+app.get("/getvideos",function(req,res){
+  var querry=`SELECT * FROM psgskill.uploaddata`
+  database.query(querry,function(err,data){
+    res.send(data)
+  })
+})
 app.listen(PORT, function(){
     console.log("Server running on localhost:" + PORT);
   });
